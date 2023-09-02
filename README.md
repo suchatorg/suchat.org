@@ -5,4 +5,4 @@ The suchat.org XMPP service
 
 These are the configuration files used for our ejabberd installation that host suchat.org
 
-Feel free to <a href="https://www.suchat.org/contacte-con-nosotros/">contact</a> us for questions
+Feel free to <a href="mailto:carlos@suchat.org">contact</a> us for questions
