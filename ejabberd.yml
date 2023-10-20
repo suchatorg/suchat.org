@@ -60,12 +60,6 @@ listen:
     ciphers: CIPHERS_MODERN
     protocol_options: PROTOCOL_MODERN
   -
-    port: 5111
-    ip: "127.0.0.1"
-    module: ejabberd_http
-    request_handlers:
-      /api: mod_http_api
-  -
     port: 3478
     ip: "::"
     module: ejabberd_stun
@@ -189,30 +183,6 @@ access_rules:
     allow: local
   trusted_network: 
     allow: loopback
-
-api_permissions:
-  "rest api":
-    who:
-      - user: "carlos@suchat.org"
-    what:
-      - ban_account
-      - change_password
-      - check_account
-      - check_password
-      - get_presence
-      - get_vcard
-      - kick_user
-      - private_get
-      - private_set
-      - register
-      - registered_vhosts
-      - send_message
-      - unregister
-      - incoming_s2s_number
-      - outgoing_s2s_number
-      - set_last
-      - stats
-      - status
 registration_timeout: 3600
 language: "es"
 captcha_cmd: "/home/ejabberd/lib/ejabberd/priv/bin/captcha.sh"
@@ -339,7 +309,6 @@ modules:
     resend_on_timeout: if_offline
   mod_s2s_dialback: {}
   mod_shared_roster: {}
-  mod_http_api: {}
   mod_block_strangers: {}
   mod_sic: {}
   mod_fail2ban: {}
